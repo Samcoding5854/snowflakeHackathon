@@ -41,7 +41,9 @@ To get started with Clued In, ensure you have the following dependencies and too
    ```
        streamlit run main.py
    ```
-```
+
+
+
 ## Details
 
 ### What it does
