@@ -25,8 +25,6 @@ To get started with Clued In, ensure you have the following dependencies and too
     ```
        pip install virualenv
     
-       cd App
-    
        python3.10 -m venv <virtual-environment-name>
 
     ```
