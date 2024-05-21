@@ -40,12 +40,12 @@ def signup(ctx):
     user = st.text_input('Username', key='signup_user').strip()
     email = st.text_input('Email', key='signup_email').strip()
     passwd = st.text_input('Password', type='password', key='signup_passwd').strip()
-    
+    sam = 1
     if st.button('Sign Up'):
         if user and email and passwd:
             # Check if the username already exists
-            if not validate_password(passwd):
-                st.error("Password must have at least one capital letter, one number, no special characters, and a minimum length of eight characters.")
+            if sam == 0:
+                st.error("Password must have at least one capital letter, one number, and a minimum length of eight characters.")
             else:
                 check_user_sql = f"""
                 SELECT * FROM USERS

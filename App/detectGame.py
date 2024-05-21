@@ -7,9 +7,9 @@ REPLICATE_TOKEN = st.secrets["REPLICATE_API_TOKEN"]
 # Function to call LLM API and get story response
 def call_llm_api():
     input_data = {
-        "prompt": '''You are a part of a detective game where a player needs to solve a murder mystery. Provide a detailed response in JSON format that includes the following sections:
+        "prompt": '''You are a part of a detective game where a player needs to solve a murder mystery. Provide a detailed response in JSON format that includes the following sections and each key and value must be enclosed in double quotes:
 
-        1. **Story:** Provide a captivating and detailed narrative describing the murder and the scene. Include information about the victim's background, recent activities..
+        1. **Story:** Provide a captivating and detailed narrative describing the murder and the scene. Include information about the victim's background, recent activities.
 
         2. **Suspects:**
         - **Name:** 
