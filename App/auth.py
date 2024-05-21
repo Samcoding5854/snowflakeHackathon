@@ -16,16 +16,19 @@ def creds(ctx):
         WHERE USERNAME = '{user}' AND PASSWORD = '{passwd}'
         """
         data = ctx.cursor().execute(sql).fetchone()
-        if len(data) > 0:
+        if data==None:
+            st.error('Invalid credentials')
+            st.session_state['authenticated'] = False    
+        elif len(data) > 0:
             st.session_state['authenticated'] = True
-            st.experimental_rerun()
+            st.rerun()
         else:
             st.error('Invalid credentials')
             st.session_state['authenticated'] = False
             
 def validate_password(password):
     # Regex pattern to enforce password criteria
-    pattern = r"^(?=.*[A-Z])(?=.*\d)[A-Za-z\d]{8,}$"
+    pattern = r"^(?=.[A-Z])(?=.\d)[A-Za-z\d]{8,}$"
     if re.match(pattern, password):
         return True
     else:
@@ -60,7 +63,7 @@ def signup(ctx):
                         ctx.cursor().execute(insert_sql)
                         st.success('Account created successfully! Please log in.')
                         st.session_state['signup_complete'] = True
-                        st.experimental_rerun() 
+                        st.rerun() 
                     except Exception as e:
                         st.error(f"Error creating account: {e}")
         else:

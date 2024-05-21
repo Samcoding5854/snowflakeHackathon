@@ -2,8 +2,14 @@ import streamlit as st
 import re
 import snowflake.connector
 from auth import login,authenticated,signup
-from detectGame import detect_Game
-
+from detectGame import DETECT_GAME
+from AboutUs import ABOUTUS
+st.set_page_config(
+        page_title="Mystery Matrix: AI Detective",
+        page_icon="🕵‍♂",
+        layout="wide",  # 'centered' or 'wide'
+        initial_sidebar_state="expanded"  # 'auto', 'expanded', 'collapsed'
+    )
 
 def CONNECTION():
     ctx = snowflake.connector.connect(
@@ -24,9 +30,11 @@ def MAIN():
         login(ctx)
     elif authenticated():
         st.sidebar.title('Detective Game')
-        app = st.sidebar.selectbox('Navigation', ['detectGame'])
-        if app == "Chat":
-           detect_Game()
+        app = st.sidebar.selectbox('', ['DetectGame','About Us'])
+        if app == "DetectGame":
+           DETECT_GAME()
+        else:
+            ABOUTUS()
     else:
         option = st.selectbox('Choose an option', ['Login', 'Sign Up'])
         if option == 'Sign Up':
