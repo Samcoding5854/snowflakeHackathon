@@ -111,10 +111,12 @@ def DETECT_GAME():
 
         # Save response in session state
         st.session_state['response'] = response
-
+        try:
         # Get Image using the ImagePrompt
-        image_prompt = response["ImagePrompt"]
-        image_url = getImage(image_prompt)
+            image_prompt = response["ImagePrompt"]
+            image_url = getImage(image_prompt)
+        except:
+            st.error("Error generating image. Please try again.")
 
         # Save image URL in session state
         st.session_state['image_url'] = image_url
