@@ -4,8 +4,9 @@ import snowflake.connector
 from auth import login,authenticated,signup
 from detectGame import DETECT_GAME
 from AboutUs import ABOUTUS
+
 st.set_page_config(
-        page_title="Mystery Matrix: AI Detective",
+        page_title="Clued In: AI Detective",
         page_icon="🕵‍♂",
         layout="wide",  # 'centered' or 'wide'
         initial_sidebar_state="expanded"  # 'auto', 'expanded', 'collapsed'
@@ -30,8 +31,8 @@ def MAIN():
         login(ctx)
     elif authenticated():
         st.sidebar.title('Detective Game')
-        app = st.sidebar.selectbox('', ['DetectGame','About Us'])
-        if app == "DetectGame":
+        app = st.sidebar.selectbox('', ['Detect Game','About Us'])
+        if app == "Detect Game":
            DETECT_GAME()
         else:
             ABOUTUS()
