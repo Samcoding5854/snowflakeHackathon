@@ -1,7 +1,9 @@
 import streamlit as st
 import replicate
 
-REPLICATE_API_TOKEN = "r8_JLosWfgzJu6KExgiR5Efdq9JEDVxKCg2M9gsp"
+st.secrets
+
+REPLICATE_TOKEN = st.secrets["REPLICATE_API_TOKEN"]
 
 import json
 # Function to call LLM API and get story response
@@ -28,7 +30,7 @@ def call_llm_api():
     "max_new_tokens":1024
     }
 
-    api = replicate.Client(api_token=REPLICATE_API_TOKEN)
+    api = replicate.Client(api_token=REPLICATE_TOKEN)
     output = api.run("snowflake/snowflake-arctic-instruct", input=input_data)
     output_text = "".join(output)
     print(output_text)
