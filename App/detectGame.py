@@ -102,9 +102,12 @@ def DETECT_GAME():
 
     # Button to trigger API call and display story
     if st.button("Generate Story"):
-        # Call LLM API to get story response
-        response = call_llm_api()
-        response = json.loads(response)
+        try:
+            # Call LLM API to get story response
+            response = call_llm_api()
+            response = json.loads(response)
+        except:
+            st.error("Error generating story. Please try again.")
 
         # Save response in session state
         st.session_state['response'] = response
