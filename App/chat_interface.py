@@ -1,0 +1,2 @@
+def CHAT():
+    return 'hi'
