@@ -6,7 +6,7 @@ AI generates a unique storyline filled with suspects and hints, challenging you 
 
 ## Introduction
 
- Using language models like Artic LLM to generate a story with suspects and hints adds an intriguing layer of unpredictability and challenge. Players will not only enjoy the mystery-solving aspect but also the novelty of interacting with AI-generated content.
+ Using language models like Arctic LLM to generate a story with suspects and hints adds an intriguing layer of unpredictability and challenge. Players will not only enjoy the mystery-solving aspect but also the novelty of interacting with AI-generated content.
 
 
 
@@ -24,8 +24,6 @@ To get started with Clued In, ensure you have the following dependencies and too
 2. Set up virtual environment using following command :
     ```
        pip install virualenv
-    
-       cd App
     
        python3.10 -m venv <virtual-environment-name>
 
@@ -48,15 +46,15 @@ To get started with Clued In, ensure you have the following dependencies and too
 
 ### What it does
 
-Clued In: AI Detective crafts immersive narratives using Artic LLM, weaving intricate plots filled with suspects and tantalizing clues. Players step into the shoes of a detective, tasked with piecing together evidence to uncover the identity of the perpetrator behind each crime.
+Clued In: AI Detective crafts immersive narratives using Arctic LLM, weaving intricate plots filled with suspects and tantalizing clues. Players step into the shoes of a detective, tasked with piecing together evidence to uncover the identity of the perpetrator behind each crime.
 
 ### How we built it
 
-Combining the power of Streamlit and  Snowflake's  Artic, we constructed Clued In: AI Detective to deliver a seamless and captivating user experience. Leveraging Snowflake's database capabilities, we ensured that player progress and interactions were securely stored and accessible.
+Combining the power of Streamlit and  Snowflake's  Arctic, we constructed Clued In: AI Detective to deliver a seamless and captivating user experience. Leveraging Snowflake's database capabilities, we ensured that player progress and interactions were securely stored and accessible.
 
 ### Challenges we ran into
 
-Our journey to bring Clued In to life was not without its hurdles. Challenges ranging from deployment intricacies to setting up the inference API for Artic tested our problem-solving skills and resourcefulness. Establishing robust database connectivity presented another hurdle that demanded innovative solutions.
+Our journey to bring Clued In to life was not without its hurdles. Challenges ranging from deployment intricacies to setting up the inference API for Arctic tested our problem-solving skills and resourcefulness. Establishing robust database connectivity presented another hurdle that demanded innovative solutions.
 
 
 
