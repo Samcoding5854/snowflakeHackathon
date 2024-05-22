@@ -35,7 +35,7 @@ def ABOUTUS():
 
     # Display project description
     st.title("Detective Mastermind: Solve the Murder Mystery")
-    st.image('logo.jpg', caption='Our Logo', width = 400)
+    st.image('App/logo.jpg', caption='Our Logo', width = 400)
     st.write(project_description)
 
     
@@ -46,13 +46,13 @@ def ABOUTUS():
     
     # Member 1
     st.write("*Darsh Baxi*")
-    st.image('darsh.jpg', width=200)
+    st.image('App/darsh.jpg', width=200)
     st.write("GitHub: [Darsh Baxi](https://github.com/darshbaxi)")
     st.write("LinkedIn: [Darsh Baxi](https://www.linkedin.com/in/darsh-baxi-81350124a/)")
     
     # Member 2
     st.write("*Samarth Sahu*")
-    st.image('samarth.jpg', width=200)
+    st.image('App/samarth.jpg', width=200)
     st.write("GitHub: [Samarth Sahu](https://github.com/Samcoding5854/)")
     st.write("LinkedIn: [Samarth Sahu](https://www.linkedin.com/in/samarth-sahu/)")
 
